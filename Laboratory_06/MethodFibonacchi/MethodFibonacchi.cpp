@@ -65,10 +65,6 @@ namespace cm
 			utility::BaseType alpha = a + static_cast<utility::BaseType>(fib(n - count - 1)) / fib(n - count + 1) * delta;
 			utility::BaseType beta = a + static_cast<utility::BaseType>(fib(n - count)) / fib(n - count + 1) * delta;
 
-			cout << "\talpha: " << alpha << "\n";
-			cout << "\tbeta: " << beta << "\n";
-			cout << "\n";
-
 			if (func(alpha) <= func(beta))
 			{
 				b = beta;

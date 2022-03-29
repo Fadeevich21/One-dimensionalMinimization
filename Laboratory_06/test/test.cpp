@@ -1,13 +1,13 @@
 #include "test.hpp"
-#include "utility.hpp"
+#include "..\utility\utility.hpp"
 
-#include "DataOneDimentionalMinimization.hpp"
-#include "MethodOneDimentionalMinimization.hpp"
-#include "SolveOneDimentionalMinimization.hpp"
+#include "..\DataOneDimentionalMinimization\DataOneDimentionalMinimization.hpp"
+#include "..\MethodOneDimentionalMinimization\MethodOneDimentionalMinimization.hpp"
+#include "..\SolveOneDimentionalMinimization\SolveOneDimentionalMinimization.hpp"
 
-#include "MethodOptimalSearch.hpp"
-#include "MethodFibonacchi.hpp"
-#include "MethodDividingSegmentHalf.hpp"
+#include "..\MethodOptimalSearch\MethodOptimalSearch.hpp"
+#include "..\MethodDividingSegmentHalf\MethodDividingSegmentHalf.hpp"
+#include "..\MethodFibonacchi\MethodFibonacchi.hpp"
 
 #include <iostream>
 #include <cmath>
@@ -134,6 +134,66 @@ namespace test
 		cout << "\tResult: " << result << "\n\n";
 
 		BaseType checkResult = -0.9987L;
+		CHECK_STATUS(abs(result - checkResult) <= epsilon);
+	}
+
+	void test_variant10_MethodOptimalSearch()
+	{
+		cout << "Test: test_variant10_MethodOptimalSearch\n";
+
+		Function function = [](const BaseType x)
+		{
+			return (x - 1) * (x - 2);
+		};
+		BaseType epsilon = 0.001L;
+		BaseType leftBorder = 1.L;
+		BaseType rightBorder = 2.L;
+
+		DataOneDimentionalMinimization *data = new DataOneDimentionalMinimization(function, epsilon, leftBorder, rightBorder);
+		BaseType result = test_MethodOptimalSearch(data);
+		cout << "\tResult: " << result << "\n\n";
+
+		BaseType checkResult = -0.25L;
+		CHECK_STATUS(abs(result - checkResult) <= epsilon);
+	}
+
+	void test_variant10_MethodFibonacchi()
+	{
+		cout << "Test: test_variant10_MethodFibonacchi\n";
+
+		Function function = [](const BaseType x)
+		{
+			return (x - 1) * (x - 2);
+		};
+		BaseType epsilon = 0.001L;
+		BaseType leftBorder = 1.L;
+		BaseType rightBorder = 2.L;
+
+		DataOneDimentionalMinimization *data = new DataOneDimentionalMinimization(function, epsilon, leftBorder, rightBorder);
+		BaseType result = test_MethodFibonacchi(data);
+		cout << "\tResult: " << result << "\n\n";
+
+		BaseType checkResult = -0.25L;
+		CHECK_STATUS(abs(result - checkResult) <= epsilon);
+	}
+
+	void test_variant10_MethodDividingSegmentHalf()
+	{
+		cout << "Test: test_variant10_MethodDividingSegmentHalf\n";
+
+		Function function = [](const BaseType x)
+		{
+			return (x - 1) * (x - 2);
+		};
+		BaseType epsilon = 0.001L;
+		BaseType leftBorder = 1.L;
+		BaseType rightBorder = 2.L;
+
+		DataOneDimentionalMinimization *data = new DataOneDimentionalMinimization(function, epsilon, leftBorder, rightBorder);
+		BaseType result = test_MethodDividingSegmentHalf(data);
+		cout << "\tResult: " << result << "\n\n";
+
+		BaseType checkResult = -0.25L;
 		CHECK_STATUS(abs(result - checkResult) <= epsilon);
 	}
 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "MethodOneDimentionalMinimization.hpp"
-#include "utility.hpp"
+#include "..\MethodOneDimentionalMinimization\MethodOneDimentionalMinimization.hpp"
+#include "..\utility\utility.hpp"
 
 namespace cm
 {

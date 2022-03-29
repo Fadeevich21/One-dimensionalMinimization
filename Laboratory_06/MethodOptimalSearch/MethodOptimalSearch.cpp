@@ -30,10 +30,10 @@ namespace cm
 			utility::BaseType tmpResult = func(x);
 			result = MIN(result, tmpResult);
 
-			cout << "x = " << x << "\n";
-			cout << "y = " << tmpResult << "\n";
-			cout << "result = " << result << "\n";
-			cout << "\n";
+			cout << "\tx = " << x << "\n";
+			cout << "\ty = " << tmpResult << "\n";
+			cout << "\tresult = " << result << "\n";
+			cout << "\n\n";
 		}
 
 		return result;

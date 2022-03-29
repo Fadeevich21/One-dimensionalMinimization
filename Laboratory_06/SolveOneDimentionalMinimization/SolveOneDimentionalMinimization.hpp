@@ -1,7 +1,7 @@
 #pragma once
 
-#include "DataOneDimentionalMinimization.hpp"
-#include "MethodOneDimentionalMinimization.hpp"
+#include "..\DataOneDimentionalMinimization\DataOneDimentionalMinimization.hpp"
+#include "..\MethodOneDimentionalMinimization\MethodOneDimentionalMinimization.hpp"
 
 namespace cm
 {

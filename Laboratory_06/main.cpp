@@ -1,7 +1,7 @@
 #include <iostream>
 #include <windows.h>
 
-#include "test.hpp"
+#include "test\test.hpp"
 
 using namespace std;
 using namespace test;
@@ -22,8 +22,13 @@ int main()
 
 void test_()
 {
-	//test_exampleFromTheManual_MethodOptimalSearch();
-	//test_exampleFromTheManual_MethodFibonacchi();
-	//test_exampleFromTheManual_MethodDividingSegmentHalf();
+	test_exampleFromTheManual_MethodOptimalSearch();
+	test_exampleFromTheManual_MethodFibonacchi();
+	test_exampleFromTheManual_MethodDividingSegmentHalf();
+
 	test_exampleInternet_MethodFibonacchi();
+
+	test_variant10_MethodOptimalSearch();
+	test_variant10_MethodFibonacchi();
+	test_variant10_MethodDividingSegmentHalf();
 }
